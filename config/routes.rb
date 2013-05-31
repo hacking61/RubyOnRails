@@ -2,6 +2,8 @@ Direcciones::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
     #match '/' => 'principal#index'
+    #EDITADO X DAVO, ESTE ES EL CONTROLLER DECLARADO: EL CONTROLLER SE CREO CON EL SIGUIENTE COMANDO:
+    #rails generate controller principal
     match 'prueba' => 'principal#index', :as => 'index'
 
   # Sample of regular route:
@@ -54,7 +56,7 @@ Direcciones::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  #EDITADO POR DVO, ESTE ES LA PAGINA PRINCIPAL QUE CARGARÁ POR DEFAULT
+  #EDITADO POR DVO, ESTE ES LA PAGINA PRINCIPAL QUE CARGARï¿½ POR DEFAULT
   #root :to => 'principal#index'
   
 
