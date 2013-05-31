@@ -1,0 +1,29 @@
+
+
+Pasos para Instalar Rails
+
+1) Descargar el Rails Installer http://railsinstaller.org/ 1.92
+
+2) Generar el cascaron del MVC rails new application, si ocupas alguna BD en especifico entonces rails new application -d sqlite3
+
+3) Generar el Controller dentro de application con : rails generate controller principal
+
+4) Editar el archivo app\controller\prueba_controller.rb, ejemplo agregar este codigo :
+
+def index
+     mensaje = "Hola a todos...<br>"
+     ["Pedro", "Pablo", "Juan"].each do |nombre|
+       mensaje += "y a "+nombre+" tambien<br>"
+     end
+     render :text => mensaje
+   end
+
+
+     
+
+5) Declarar el controlador en el archivo config\routes.rb::: 
+match 'prueba' => 'principal#index', :as => 'index'
+
+Nota:principal es el nombre del controlador
+     index es igual nombre de la clase declarada dentro del archivo
+     controllers\principal_controller.rb
